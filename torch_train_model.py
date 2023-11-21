@@ -43,7 +43,7 @@ class NetworkEncoder(nn.Module):
         try:
             return self._leaky1(self._lin1(x))
         except AttributeError:
-            self.set_num_dense(x.size(-1))
+            self.set_num_dense(x.size(-1))# based on the last layer of convolutions
             return self.linear1(x)
 
     def dense(self, x):

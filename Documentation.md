@@ -8,6 +8,21 @@ It has 5 classes as follows:
 
 ## SortedNumberGenerator
 Data generator providing lists of sorted numbers.
+This is most important function that is generative terms and predictive terms which are numbers. 
+Positive samples are present in sequence and Negative sample are not in sequence.
+Example of Positive sample:
+Terms 3,4,5,6
+Predictive Terms 7,8,9,0
+
+Numbers range from 0-10 and sequence can start from any number.
+
+Example of Negative sample:
+Terms 3,4,5,6
+Predictive Terms 9,4,3,2[ any number which is not in sequence] 
+
+All the generated iamges have random image background and digit shape in some rnadom font in dark shade.
+
+
 
 ### Initialization
 Initialization Function parameters:
@@ -33,7 +48,7 @@ Based on bkackbox ussage:
 	2. Label ??
 
 #  Train_model.py
-It has 1 and 5 function as follows:
+It has 1 classand 5 function as follows:
 1.  CPC layer Class
 2.  Network Encoder Function
 3.  Network Autoregressive 
@@ -64,6 +79,8 @@ x = keras.layers.BatchNormalization()(x)
 x = keras.layers.LeakyReLU()(x)
 x = keras.layers.Dense(units=code_size, activation='linear', name='encoder_embedding')(x)
 ```
+
+
 
 
 ## Network Autoregressive
